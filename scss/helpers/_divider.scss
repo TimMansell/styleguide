@@ -1,0 +1,24 @@
+@import 'utilities/breakpoints';
+
+.divider {
+	 @include media-breakpoint-only(xs){
+		margin-bottom: 15px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&:after {
+			content:'';
+			margin-top: 20px;
+			width: 60%;
+			border-bottom: 1px solid rgba(0,0,0,.2);
+			box-shadow: 0 1px rgba(255,255,255,.05);
+		}
+	}
+
+	&:last-of-type {
+		&:after {
+			content: none;
+		}
+	}
+}
