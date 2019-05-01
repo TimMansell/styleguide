@@ -1,7 +1,8 @@
 {
   "scripts": {
     "storybook": "start-storybook",
-    "build": "build-storybook",
+    "build": "run-s jest build-storybook",
+    "start": "run-p storybook test:watch",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --colors"
@@ -25,6 +26,7 @@
     "style-loader": "^0.23.1"
   },
   "dependencies": {
+    "npm-run-all": "^4.1.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   }
