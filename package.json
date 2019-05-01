@@ -1,7 +1,8 @@
 {
   "scripts": {
     "storybook": "start-storybook",
-    "build": "run-s jest build-storybook",
+    "storybook:build": "build-storybook",
+    "build": "run-s test storybook:build",
     "start": "run-p storybook test:watch",
     "test": "jest",
     "test:watch": "jest --watch",
